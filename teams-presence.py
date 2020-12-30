@@ -297,7 +297,7 @@ def switchOff() :
 	if blinkThread != None :
 		blinkThread.do_run = False
 	unicorn.clear()
-	unicorn.off()
+	unicorn.set_all(0, 0, 0)
 
 class LightPoint:
 
