@@ -221,7 +221,7 @@ def setColor(r, g, b, brightness, speed) :
 	globalBlue = b
 
 	if brightness == '' :
-		unicorn.brightness(brightness_led)
+		unicorn.set_brightness(brightness_led)
 
 	for y in range(height):
 		for x in range(width):
@@ -231,7 +231,7 @@ def setColor(r, g, b, brightness, speed) :
 def pulse():
 	for b in range(0, 7):
 		blockPrint()
-		unicorn.brightness(b/10)
+		unicorn.set_brightness(b/10)
 		enablePrint()
 		for y in range(height):
 			for x in range(width):
@@ -241,7 +241,7 @@ def pulse():
 	sleep(1)
 	for b in range(6, 0, -1):
 		blockPrint()
-		unicorn.brightness(b/10)
+		unicorn.set_brightness(b/10)
 		enablePrint()
 		for y in range(height):
 			for x in range(width):
@@ -489,8 +489,8 @@ if __name__ == '__main__':
 
 	# Setup Unicorn light
 	setColor(50, 50, 50, 1, '')
-	unicorn.set_layout(unicorn.AUTO)
-	unicorn.brightness(0.5)
+	unicorn = unicorn()
+	unicorn.set_brightness(0.5)
 
 	# Get the width and height of the hardware
 	width, height = unicorn.get_shape()
