@@ -9,6 +9,7 @@ echo Installing Python3 dev
 sudo apt-get install python3-pip python-dev
 echo Installing UNICORN pHAT library
 sudo pip3 install unicornhat
+sudo pip3 install unicornhatmini
 echo Installing qrcode module
 sudo pip3 install pyqrcode
 echo Installing gpiozero 
